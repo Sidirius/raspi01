@@ -19,3 +19,4 @@ cd /home/pi/
 wget https://github.com/brooc/boblight-rpi/raw/master/src/boblight-dispmanx
 chmod 755 boblight-dispmanx
 ldconfig
+rm -rf /home/pi/setup_raspi01
