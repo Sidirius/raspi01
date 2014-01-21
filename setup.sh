@@ -18,3 +18,4 @@ make; sudo make install
 cd /home/pi/
 wget https://github.com/brooc/boblight-rpi/raw/master/src/boblight-dispmanx
 chmod 755 boblight-dispmanx
+ldconfig
