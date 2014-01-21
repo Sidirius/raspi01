@@ -8,6 +8,7 @@ chmod 755 write_boblight.conf.sh
 ./write_boblight.conf.sh
 chmod 755 write_etc_rc.local.sh
 ./write_etc_rc.local.sh
+svn cleanup
 svn checkout http://boblight.googlecode.com/svn/trunk/ /home/pi/boblight_source
 cd /home/pi/boblight_source/
 ./configure --without-portaudio --without-x11 --without-libusb
