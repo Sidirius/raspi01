@@ -1,7 +1,7 @@
 #!/bin/bash
 _now=$(date +"%Y-%m-%d_%H.%M.%S")
-sudo apt-get update
-sudo apt-get install -y wicd-curses htop gcc g++ make subversion
+apt-get update
+apt-get install -y wicd-curses htop gcc g++ make subversion
 mv /etc/boblight.conf /etc/boblight.conf_$_now.bak
 cp boblight.conf /etc/boblight.conf
 mv /boot/config.txt /boot/config.txt_$_now.bak
