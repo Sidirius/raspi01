@@ -2,12 +2,14 @@
 _now=$(date +"%Y-%m-%d_%H.%M.%S")
 sudo apt-get update
 sudo apt-get install -y wicd-curses htop gcc g++ make subversion
-chmod 755 write_config.txt.sh
-./write_config.txt.sh
-chmod 755 write_boblight.conf.sh
-./write_boblight.conf.sh
-chmod 755 write_etc_rc.local.sh
-./write_etc_rc.local.sh
+mv /etc/boblight.conf /etc/boblight.conf_$_now.bak
+cp boblight.conf /etc/boblight.conf
+mv /boot/config.txt /boot/config.txt_$_now.bak
+cp config.txt /boot/config.txt
+mv /etc/rc.local /etc/rc.local_$_now.bak
+cp rc.local /etc/rc.local
+chmod 755 /etc/rc.local
+cd /home/pi/
 svn cleanup
 svn checkout http://boblight.googlecode.com/svn/trunk/ /home/pi/boblight_source
 cd /home/pi/boblight_source/

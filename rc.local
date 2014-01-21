@@ -1,0 +1,6 @@
+#!/bin/sh -e
+# Boblight START
+/usr/local/bin/boblightd -f &
+/home/pi/boblight-dispmanx -o interpolation=1 -o speed=60 -o threshold=25 -o autospeed=0 -o saturation=1.2 -o value=2 -p 100 -i 0.1 -f /dev/null &
+# Boblight END
+exit 0
